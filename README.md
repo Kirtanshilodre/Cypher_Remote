@@ -7,7 +7,6 @@
 ### Control your PC from your Android phone — no cloud, no subscription, no BS.
 
 [![Download](https://img.shields.io/badge/⬇%20Download-Website-9b30ff?style=for-the-badge&logo=android&logoColor=white)](https://kirtanshilodre.github.io/Cypher_Remote)
-[![GitHub Releases](https://img.shields.io/github/v/release/Kirtanshilodre/Cypher_Remote?style=for-the-badge&color=9b30ff&label=Latest%20Release)](https://github.com/Kirtanshilodre/Cypher_Remote/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Android-9b30ff?style=for-the-badge)](https://github.com/Kirtanshilodre/Cypher_Remote)
 
 </div>
@@ -81,17 +80,6 @@ Open **Cypher Remote** on your Android → enter the IP address → tap **Connec
 ---
 
 ## Running from Source
-
-**Windows / Linux:**
-```bash
-pip install pyautogui
-python cypher_pc.py
-```
-
-Custom port:
-```bash
-python cypher_pc.py 9000
-```
 
 **macOS:**
 ```bash
