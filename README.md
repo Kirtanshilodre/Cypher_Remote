@@ -17,7 +17,9 @@ Cypher Remote is a local network PC remote control system. It lets you control y
 | Platform | File | Requirements |
 |---|---|---|
 | Windows PC | `CypherPC.zip` | Windows 10/11 |
-| Android Phone | `base.apk` | Android 8+ |
+| Android Phone | `Cypher.apk` | Android 8+ |
+| macOS | `cypher_mac_app.zip` | macOS 11+ |
+
 
 👉 **[Go to Downloads](https://kirtanshilodre.github.io/Cypher_Remote#download)**
 
@@ -85,6 +87,11 @@ The Android app sends commands over a direct TCP socket connection to the PC. Th
 - Android 8.0 or higher
 - Allow installation from unknown sources (for APK)
 
+**Mac:**
+- macOS 11+
+- Python 3.8+
+- Allow accessibility permissions (first time only)
+
 ---
 
 ## Running from Source
@@ -99,18 +106,24 @@ Custom port:
 python cypher_pc.py 9000
 ```
 
+**Mac:**
+```bash
+python3 cypher_mac_app.py
+```
+
 ---
 
 ## Project Structure
 
 ```
 Cypher_Remote/
-├── cypher_pc.py       # PC GUI app + receiver server
-├── cypher.py          # Standalone receiver (no GUI)
-├── index.html         # Website (GitHub Pages)
-└── base.apk           # Android app
+├── cypher_pc.py        # PC GUI app + receiver server
+├── cypher.py           # Standalone receiver (no GUI)
+├── Cypher.html         # Website (GitHub Pages)
+|── Cypher.apk          # Android app
+└── cypher_mac_app.zip  # macOS app
 ```
 
 ---
 
-<p align="center">Made with 💜 by <a href="https://github.com/Kirtanshilodre">Kirtanshilodre</a></p>
+<p align="center">Made by <a href="https://github.com/Kirtanshilodre">Kirtanshilodre</a></p>
