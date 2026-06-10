@@ -65,16 +65,6 @@ Android App  ──── TCP ────▶  CypherPC / cypher_mac_app  (Port 
 
 ---
 
-## Downloads
-
-| Platform | Download | Requirements |
-|---|---|---|
-| 🪟 Windows | [`CypherPC.zip`](https://github.com/Kirtanshilodre/Cypher_Remote/releases/download/v1.0/CypherPC.zip) | Windows 10/11 |
-| 🍎 macOS | [`cypher_mac_app.zip`](https://github.com/Kirtanshilodre/Cypher_Remote/releases/download/v1.0/cypher_mac_app.zip) | macOS 11+ · Python 3 |
-| 📱 Android | [`Cypher.apk`](https://github.com/Kirtanshilodre/Cypher_Remote/releases/download/v1.0/Cypher.apk) | Android 8.0+ |
-
-👉 **[Full Download Page](https://kirtanshilodre.github.io/Cypher_Remote)**
-
 ---
 
 ## Quick Setup
