@@ -65,8 +65,6 @@ Android App  ──── TCP ────▶  CypherPC / cypher_mac_app  (Port 
 
 ---
 
----
-
 ## Quick Setup
 
 ### Step 1 — Same Network
