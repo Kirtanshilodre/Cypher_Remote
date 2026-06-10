@@ -1,0 +1,58 @@
+# ANDROID / KOTLIN
+*.iml
+.gradle/
+.kotlin/
+local.properties
+/.idea/
+/app/build/
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.ap_
+*.apk
+!releases/*.apk
+
+# Signing keys - NEVER commit
+*.jks
+*.keystore
+debug.keystore
+release.keystore
+keystore.properties
+
+# PYTHON
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.spec
+dist/
+venv/
+.venv/
+env/
+
+# PyInstaller
+*.exe
+!releases/*.exe
+
+# ENVIRONMENT
+.env
+.env.local
+*.secret
+
+# OS - macOS
+.DS_Store
+.AppleDouble
+
+# OS - Windows
+Thumbs.db
+Desktop.ini
+
+# EDITORS
+.vscode/
+*.swp
+*.log
+
+# RELEASE ZIPS (GitHub Releases mein rakho)
+*.zip
+!releases/*.zip
