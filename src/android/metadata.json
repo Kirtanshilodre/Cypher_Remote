@@ -1,0 +1,6 @@
+{
+  "name": "CYPHER",
+  "description": "Wireless Bluetooth PC/laptop remote control app with a mouse trackpad, media controllers, custom keyboard inputs, and customizable shortcut actions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
