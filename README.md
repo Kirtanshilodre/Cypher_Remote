@@ -15,10 +15,10 @@
 
 ## What is Cypher Remote?
 
-**Cypher Remote** is a local network PC remote control system. Your Android phone connects directly to your PC over WiFi or Bluetooth — no internet, no third-party servers, no data leaves your network.
+**Cypher Remote** is a local network PC remote control system. Your Android phone connects directly to your PC over WiFi — no internet, no third-party servers, no data leaves your network.
 
 ```
-Android App  ──── TCP ────▶  CypherPC / cypher_mac_app  (Port 3000)
+Android App  ──── TCP ────▶  CypherPC (Windows) / CypherMAC (macOS)
                                         │
                                         ▼
                              Mouse · Keyboard · Media · Shortcuts
@@ -56,12 +56,17 @@ Android App  ──── TCP ────▶  CypherPC / cypher_mac_app  (Port 
 |---|---|
 | 🖱️ **Trackpad** | Move mouse, left/right/double click, scroll strip, adjustable sensitivity |
 | ⌨️ **Keyboard** | Type text, special keys, modifiers (Ctrl, Alt, Shift, Win) |
-| ⚡ **Shortcuts** | Custom profiles — Chrome, VLC, Presentation and more. Add your own. |
+| ⚡ **Shortcuts** | Custom profiles — Chrome, VLC, Presentation and more |
 | 🎵 **Media Controls** | Play/Pause, Next, Prev, Volume Up/Down, Mute |
+| 📷 **QR Code Connect** | Scan QR from PC tray — IP fills automatically, no typing |
+| 📋 **Clipboard Sync** | Copy on phone → paste on PC and vice versa |
+| 🕐 **Connection History** | Last 5 IPs saved — one tap reconnect |
+| 📳 **Haptic Feedback** | Vibration on every button press |
+| 🔒 **Lock / Sleep** | Lock or sleep your PC from phone instantly |
 | 📶 **WiFi + Bluetooth** | Connect over local WiFi or Bluetooth RFCOMM |
 | 🔒 **100% Private** | No cloud, no internet required, direct TCP only |
-| 🚀 **Auto Start** | CypherPC launches automatically with Windows startup |
-| 🎨 **Purple UI** | Dark purple/black theme throughout Android + PC apps |
+| 🎨 **Purple UI** | Dark purple/black theme throughout |
+
 
 ---
 
@@ -74,18 +79,18 @@ Connect your PC and phone to the **same WiFi** (or use phone hotspot).
 
 **Windows:**
 ```
-Open CypherPC.exe → note the IP shown in system tray → allow through Firewall
+Open CypherPC.exe → note IP in system tray → allow through Firewall
 ```
 
 **macOS:**
 ```
-pip3 install pynput pyautogui
-python3 cypher_mac_app.py
+Open CypherMAC.app → allow Accessibility permission when prompted
+Note the IP shown in the app window
 ```
-> Allow Accessibility permission when prompted (first time only).
+> First run: macOS will ask for Accessibility permission — allow it for mouse/keyboard control.
 
 ### Step 3 — Connect from Phone
-Open **Cypher Remote** → enter IP address → tap **Connect PC Socket** ✅
+Open **Cypher Remote** → WiFi tab → scan QR or enter IP → tap **Connect PC Socket** ✅
 
 ---
 
@@ -94,8 +99,8 @@ Open **Cypher Remote** → enter IP address → tap **Connect PC Socket** ✅
 | Component | Technology |
 |---|---|
 | Android App | Kotlin + Jetpack Compose |
-| PC Receiver (Windows) | Python — `pyautogui`, `ctypes`, `tkinter` |
-| Mac Receiver | Python — `pyautogui`, `pynput`, `tkinter` |
+| PC Receiver (Windows) | Python — `pyautogui`, `pystray`, `qrcode` |
+| Mac Receiver | Swift + SwiftUI — Native macOS app |
 | Website | HTML/CSS/JS — GitHub Pages |
 | Connection | TCP Socket (WiFi) + Bluetooth RFCOMM |
 
@@ -105,14 +110,18 @@ Open **Cypher Remote** → enter IP address → tap **Connect PC Socket** ✅
 
 | Command | Action |
 |---|---|
-| `M:dx:dy` | Move mouse by dx, dy |
-| `C:L` | Left click |
-| `C:R` | Right click |
-| `C:D` | Double click |
+| `M:dx:dy` | Move mouse |
+| `C:L / C:R / C:D` | Left / Right / Double click |
 | `S:delta` | Scroll |
-| `K:key` | Key press |
-| `T:text` | Type text |
+| `K:text` | Type text |
+| `K_RAW:key` | Special key press |
+| `K_MOD:mods:key` | Modifier combo |
 | `MEDIA:action` | Media control |
+| `SYS:LOCK` | Lock screen |
+| `SYS:SLEEP` | Sleep PC |
+| `CLIP:PUSH:text` | Phone → PC clipboard |
+| `CLIP:PULL` | PC → Phone clipboard |
+| `FILE:START/CHUNK/END` | File transfer |
 
 ---
 
@@ -127,12 +136,23 @@ Cypher_Remote/
 │   └── images/             # App screenshots
 └── src/
     ├── android/            # Kotlin/Jetpack Compose source
-    └── pc/                 # Python receiver scripts
+    └── pc/                 # Python receiver + Mac Swift source
         ├── cypher.py
         ├── cypher_mac.py
         ├── cypher_mac_app.py
         └── requirements.txt
 ```
+
+---
+
+## What's New in v1.1
+
+- 🆕 **QR Code Connect** — scan from PC tray, instant connect
+- 🆕 **Connection History** — last 5 IPs remembered
+- 🆕 **Haptic Feedback** — vibration on all buttons
+- 🆕 **Clipboard Sync** — bidirectional phone ↔ PC
+- 🆕 **Lock / Sleep** — quick system controls
+- 🆕 **CypherMAC** — native Swift/SwiftUI Mac app (no Python needed)
 
 ---
 
