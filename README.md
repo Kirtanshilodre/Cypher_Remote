@@ -61,7 +61,6 @@ Android App  ──── TCP ────▶  CypherPC (Windows) / CypherMAC (m
 | 📷 **QR Code Connect** | Scan QR from PC tray — IP fills automatically, no typing |
 | 📋 **Clipboard Sync** | Copy on phone → paste on PC and vice versa |
 | 🕐 **Connection History** | Last 5 IPs saved — one tap reconnect |
-| 📳 **Haptic Feedback** | Vibration on every button press |
 | 🔒 **Lock / Sleep** | Lock or sleep your PC from phone instantly |
 | 📶 **WiFi + Bluetooth** | Connect over local WiFi or Bluetooth RFCOMM |
 | 🔒 **100% Private** | No cloud, no internet required, direct TCP only |
@@ -121,7 +120,6 @@ Open **Cypher Remote** → WiFi tab → scan QR or enter IP → tap **Connect PC
 | `SYS:SLEEP` | Sleep PC |
 | `CLIP:PUSH:text` | Phone → PC clipboard |
 | `CLIP:PULL` | PC → Phone clipboard |
-| `FILE:START/CHUNK/END` | File transfer |
 
 ---
 
@@ -149,7 +147,6 @@ Cypher_Remote/
 
 - 🆕 **QR Code Connect** — scan from PC tray, instant connect
 - 🆕 **Connection History** — last 5 IPs remembered
-- 🆕 **Haptic Feedback** — vibration on all buttons
 - 🆕 **Clipboard Sync** — bidirectional phone ↔ PC
 - 🆕 **Lock / Sleep** — quick system controls
 - 🆕 **CypherMAC** — native Swift/SwiftUI Mac app (no Python needed)
